@@ -61,6 +61,7 @@ function touchEnded() {
   var playerVel = 0;
   var jumpVel = 0;
   var score = 0;
+  var stimer = 0;
   var keyboard = new THREE.KeyboardState();
   var scene = new THREE.Scene();
   scene.fog = new THREE.FogExp2( "rgb(155,155,255)", 0.03 );
@@ -304,11 +305,15 @@ function touchEnded() {
         document.getElementById("score").innerHTML = Math.floor(score) + " meters";
         document.getElementById("lives").innerHTML = lives + "% shield";
         renderer.render(scene, camera);
+        if ( stimer > 0 ) {
+          stimer--;
+        }
         if ( Math.floor(score) % 1000 == 0 ) {
+          stimer = 30;
           document.getElementById("ScoreBlast").innerHTML = Math.floor(score);
           document.getElementById("ScoreBlast").style.opacity = 1.0;
         }
-        if ( Math.floor(score) % 1000 == 20 ) {
+        if ( stimer < 1 ) {
           document.getElementById("ScoreBlast").style.opacity = 0.0;
         }
         if ( lvlSpeed < 0.8 ) {
