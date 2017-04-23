@@ -421,6 +421,7 @@ function touchEnded() {
      document.getElementById("easyoptionafter").style.opacity = 1;
      document.getElementById("hardoptionafter").style.opacity = 1;
      document.getElementById("normaloptionafter").style.opacity = 1;
+     document.getElementById("normaloptionafter").style.bottom = "15%";
      document.getElementById("playagain").style.opacity = 0;
      document.getElementById("gamestart").style.bottom = "-100%";
    }
