@@ -4,10 +4,6 @@ document.addEventListener("touchend", touchEnded);
 document.addEventListener("touchmove", touchStop);
 var playerX = window.innerWidth/2;
 
-var song = new Audio("song.mp3");
-song.volume = 0.9;
-song.load();
-
 function getSounds() {
   var song = new Audio("backSong.mp3");
   song.volume = 0.9;
