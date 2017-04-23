@@ -9,7 +9,7 @@ song.volume = 0.9;
 song.load();
 
 function getSounds() {
-  var song = new Audio("song.mp3");
+  var song = new Audio("backSong.mp3");
   song.volume = 0.9;
   song.load();
 }
